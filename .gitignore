@@ -59,7 +59,7 @@ jspm_packages/
 # =========================
 # Lock files
 # =========================
-package-lock.json
+# package-lock.json 必须提交，保证前端依赖可复现，请勿加入忽略
 yarn.lock
 pnpm-lock.yaml
 
@@ -159,6 +159,7 @@ CMakeFiles/
 CMakeCache.txt
 compile_commands.json
 Makefile
+!/Makefile
 makedep*
 libtool
 aclocal.m4

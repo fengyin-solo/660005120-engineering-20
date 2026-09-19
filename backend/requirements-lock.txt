@@ -1,0 +1,20 @@
+# 后端依赖全量锁定文件（含传递依赖），构建/检查以此文件为准。
+# 由 pip freeze 生成并在 Python 3.11 下验证通过（numpy 1.26.3 支持 Python 3.9-3.12）。
+# 增减直接依赖请编辑 requirements.txt，然后在虚拟环境中重新生成并验证本文件：
+#   pip install -r requirements.txt \
+#     && pip freeze --exclude pip --exclude setuptools --exclude wheel > requirements-lock.txt
+annotated-types==0.8.0
+anyio==4.15.1
+click==8.5.0
+fastapi==0.109.0
+h11==0.16.0
+idna==3.20
+numpy==1.26.3
+packaging==26.3
+pydantic==2.13.5
+pydantic_core==2.46.5
+python-multipart==0.0.6
+starlette==0.35.1
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+uvicorn==0.27.0
