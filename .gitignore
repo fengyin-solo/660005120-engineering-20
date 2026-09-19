@@ -59,9 +59,7 @@ jspm_packages/
 # =========================
 # Lock files
 # =========================
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# package-lock.json 需要提交到仓库，用于锁定前端依赖版本，请勿忽略
 
 # =========================
 # Build / Cache / Output

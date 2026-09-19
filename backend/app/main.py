@@ -74,7 +74,10 @@ def compute_fft(i: np.ndarray, q: np.ndarray, fs: float = 1000.0):
 def compute_waterfall(i: np.ndarray, q: np.ndarray, fs: float = 1000.0, rows: int = 40):
     """Compute spectrogram waterfall"""
     n = len(i)
-    seg = n // rows
+    # 每段至少 32 点保证 FFT 有意义；样本不足 40 行时自动减少行数，
+    # 否则 samples < 1280（含前端默认的 1024）会返回空瀑布图
+    seg = max(32, n // rows)
+    rows = n // seg
     waterfall = []
     for r in range(rows):
         seg_i = i[r * seg:(r + 1) * seg]
